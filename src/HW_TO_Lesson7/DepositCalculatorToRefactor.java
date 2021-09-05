@@ -3,8 +3,10 @@ import java.util.Scanner;
 
 public class DepositCalculatorToRefactor
 {
+
     public static void main(String[] args)
     {
+
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Введите сумму вклада в банк в гривнах: ");
@@ -27,11 +29,17 @@ public class DepositCalculatorToRefactor
 
             sum = sum + y;
 
-            System.out.println("Накопленная сумма за" + " " + i + " " + "год составила: " + sum + " " + "грн. ");
+            String result1 = String.format("%.2f", sum);
 
-            System.out.println("Начисленные проценты в грн: " + y);
+            String result = String.format("%.2f", y);
 
-            System.out.println("----------------------------------------------");
+            System.out.println("Накопленная сумма за" + " " + i + " " + "год составила: " + result1 + " " + "грн. ");
+
+            System.out.println("Начисленные проценты в грн: " + result);
+
+            System.out.println("----------------------------------------------------");
         }
+
     }
+
 }
