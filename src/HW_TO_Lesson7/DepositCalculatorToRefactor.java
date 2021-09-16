@@ -1,4 +1,4 @@
-package HW_TO_Lesson7
+package HW_TO_Lesson7;
 
 import java.util.Scanner;
 
