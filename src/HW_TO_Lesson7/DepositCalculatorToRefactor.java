@@ -1,12 +1,11 @@
-package HW_TO_Lesson7;
+package HW_TO_Lesson7
+
 import java.util.Scanner;
 
 public class DepositCalculatorToRefactor
 {
-
     public static void main(String[] args)
     {
-
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Введите сумму вклада в банк в гривнах: ");
@@ -21,7 +20,7 @@ public class DepositCalculatorToRefactor
 
         int term = sc.nextInt();
 
-        System.out.println();
+        System.out.println(" ");
 
         for (int i = 1; i <= term; i++)
         {
@@ -29,17 +28,35 @@ public class DepositCalculatorToRefactor
 
             sum = sum + y;
 
-            String result1 = String.format("%.2f", sum);
+            String yearWord = "";
 
-            String result = String.format("%.2f", y);
+            if (i % 10 == 1)
+            {
+                yearWord = "год";
+            }
 
-            System.out.println("Накопленная сумма за" + " " + i + " " + "год составила: " + result1 + " " + "грн. ");
+            else if (i % 10 > 1 && i % 10 < 5)
+            {
+                if (i % 100 > 10 && i % 100 < 15)
+                {
+                    yearWord = "лет";
+                }
 
-            System.out.println("Начисленные проценты в грн: " + result);
+                else {
+                    yearWord = "года";
+                }
+            }
 
-            System.out.println("----------------------------------------------------");
+            else {
+                yearWord = "лет";
+            }
+
+            System.out.printf("Накопленная сумма за %d %s составила: %.2f грн\n", i, yearWord, sum);
+
+            System.out.printf("Начисленные проценты в грн: %.2f\n", y);
+
+            System.out.println("--------");
+
         }
-
     }
-
 }
