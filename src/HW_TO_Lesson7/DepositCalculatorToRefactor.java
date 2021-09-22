@@ -14,7 +14,7 @@ public class DepositCalculatorToRefactor
 
         System.out.print("Какой процент годовых? ");
 
-        double percent = sc.nextDouble();
+        double percent = sc.nextDouble(); 
 
         System.out.print("Длительность вклада (лет): ");
 
