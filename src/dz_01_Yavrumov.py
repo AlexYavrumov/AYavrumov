@@ -28,7 +28,6 @@ number_of_rains = [1, 2, 3, 15, 8, 13, 21, 7, 4, 30]
 
 weather_conditions = []
 def sunny_counter(expected_list: list):
-    # ваш код
     for value in number_of_rains:
         if value <= 5:
             weather_conditions.append("sunny")
